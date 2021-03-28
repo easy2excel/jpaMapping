@@ -1,18 +1,20 @@
 package com.easy2excel.jpaMapping.model;
-
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
+@Entity
 @Table(name = "person")
 @Setter
 @Getter
-@Entity
+@ToString
 public class Person {
-    @Column(name = "person_id")
+   
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "person_id")
     private Long personId;
 
     @Column(name = "person_name")
